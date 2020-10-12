@@ -1,0 +1,22 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meenachinmay/MERN_ecomm.git"
+  },
+  "author": "meenachinmay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Meenachinmay/MERN_ecomm/issues"
+  },
+  "homepage": "https://github.com/Meenachinmay/MERN_ecomm#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
