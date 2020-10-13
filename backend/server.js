@@ -16,7 +16,7 @@ app.get('/api/products', (req, res) => {
 app.get('/api/products/:id', (req, res) => {
     const product = products.find(p => p._id === req.params.id)
     if (product){
-        res.json(product)
+        res.status(200).json(product);
     } else {
         res.json({
             error: true,
@@ -24,7 +24,7 @@ app.get('/api/products/:id', (req, res) => {
             message: "Product is not found!"
         })
     }
-    res.json(product)
+    res.status(200).json(product);
 })
 
 port = 5000 || process.env.PORT;
