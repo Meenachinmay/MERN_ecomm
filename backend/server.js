@@ -1,7 +1,9 @@
-const express = require('express')
-
+const express = require('express');
+const dotenv = require('dotenv');
 const app = express();
 const products = require('./data/products');
+
+dotenv.config();
 
 app.get('/', (req, res) => {
     res.send("Api is running...")
@@ -27,6 +29,6 @@ app.get('/api/products/:id', (req, res) => {
     res.status(200).json(product);
 })
 
-port = 5000 || process.env.PORT;
+const port = 5000 || process.env.PORT;
 
 app.listen(port,console.log(`Server is running at port: ${port}`))
