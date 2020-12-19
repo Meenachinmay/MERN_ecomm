@@ -1,9 +1,13 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const colors = require('colors');
 const app = express();
+const connectDB = require('./config/db');
 const products = require('./data/products');
 
 dotenv.config();
+
+connectDB();
 
 app.get('/', (req, res) => {
     res.send("Api is running...")
@@ -31,4 +35,4 @@ app.get('/api/products/:id', (req, res) => {
 
 const port = 5000 || process.env.PORT;
 
-app.listen(port,console.log(`Server is running at port: ${port}`))
+app.listen(port,console.log(`Server is running at port: ${port}`.yellow.bold))
