@@ -20,7 +20,7 @@ app.get('/api/products', (req, res) => {
 
 // getting a single product
 app.get('/api/products/:id', (req, res) => {
-    const product = products.find(p => p._id === req.params.id)
+    const product = products.find((p) => p._id === req.params.id)
     if (product){
         res.status(200).json(product);
     } else {
